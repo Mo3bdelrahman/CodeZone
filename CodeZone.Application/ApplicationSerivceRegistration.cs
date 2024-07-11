@@ -7,7 +7,7 @@ namespace CodeZone.Application
     {
         public static IServiceCollection AddApplicationService(this IServiceCollection services)
         {
-            // add mappers,middelwares and services
+            // add mappers,middelwares
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             return services;

@@ -1,3 +1,7 @@
+using CodeZone.Application;
+using CodeZone.Infrastructure;
+using CodeZone.Persistence;
+
 namespace CodeZone.MVC
 {
     public class Program
@@ -8,6 +12,10 @@ namespace CodeZone.MVC
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddApplicationService()
+                .AddPersistanceService(builder.Configuration)
+                .AddInfrastructureService();
 
             var app = builder.Build();
 

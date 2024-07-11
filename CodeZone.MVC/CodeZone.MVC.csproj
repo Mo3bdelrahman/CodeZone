@@ -6,4 +6,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeZone.Application\CodeZone.Application.csproj" />
+    <ProjectReference Include="..\CodeZone.Infrastructure\CodeZone.Infrastructure.csproj" />
+    <ProjectReference Include="..\CodeZone.Persistence\CodeZone.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>
