@@ -9,7 +9,8 @@ namespace CodeZone.Domain.Enums
     public enum ProcessType
     {
         None = 0,
-        Purchase,
+        PurchaseNew,
+        PurchaseOld,
         Sell
     }
 }

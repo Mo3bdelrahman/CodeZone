@@ -17,8 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\StoresItems\Command\" />
-    <Folder Include="Features\StoresItems\Query\" />
     <Folder Include="Middlewares\" />
   </ItemGroup>
 

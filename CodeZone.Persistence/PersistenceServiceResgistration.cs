@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using CodeZone.Persistence.Data;
 using CodeZone.Application.Contracts.Persistence;
 using CodeZone.Persistence.Repositories;
+using CodeZone.Persistence.Strategies;
 
 namespace CodeZone.Persistence
 {
@@ -19,6 +20,7 @@ namespace CodeZone.Persistence
 
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IStoreItemRepository, StoreItemRepository>();
+            services.AddScoped<IProcessFactory,ProcessFactory>();
 
             return services;
         }
