@@ -46,49 +46,49 @@ namespace CodeZone.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            Image = "images/items/apple",
+                            Image = "images/items/item_1.png",
                             Name = "Apple"
                         },
                         new
                         {
                             Id = 2,
-                            Image = "images/items/banana",
+                            Image = "images/items/item_2.png",
                             Name = "Banana"
                         },
                         new
                         {
                             Id = 3,
-                            Image = "images/items/cherry",
+                            Image = "images/items/item_3.png",
                             Name = "Cherry"
                         },
                         new
                         {
                             Id = 4,
-                            Image = "images/items/date",
+                            Image = "images/items/item_4.png",
                             Name = "Date"
                         },
                         new
                         {
                             Id = 5,
-                            Image = "images/items/elderberry",
+                            Image = "images/items/item_5.png",
                             Name = "Elderberry"
                         },
                         new
                         {
                             Id = 6,
-                            Image = "images/items/fig",
+                            Image = "images/items/item_6.png",
                             Name = "Fig"
                         },
                         new
                         {
                             Id = 7,
-                            Image = "images/items/grape",
+                            Image = "images/items/item_7.png",
                             Name = "Grape"
                         },
                         new
                         {
                             Id = 8,
-                            Image = "images/items/honeydew",
+                            Image = "images/items/item_8.png",
                             Name = "Honeydew"
                         });
                 });

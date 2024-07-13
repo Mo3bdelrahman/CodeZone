@@ -1,9 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
-using Microsoft.EntityFrameworkCore;
+﻿using CodeZone.Application.Contracts.Persistence;
 using CodeZone.Persistence.Data;
-using CodeZone.Application.Contracts.Persistence;
 using CodeZone.Persistence.Repositories;
+using CodeZone.Persistence.Strategies;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace CodeZone.Persistence
 {
@@ -19,6 +20,8 @@ namespace CodeZone.Persistence
 
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IStoreItemRepository, StoreItemRepository>();
+            services.AddScoped<IStoreRepository, StoreRepository>();
+            services.AddScoped<IProcessFactory, ProcessFactory>();
 
             return services;
         }

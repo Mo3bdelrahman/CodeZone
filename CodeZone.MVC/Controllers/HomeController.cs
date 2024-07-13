@@ -1,6 +1,4 @@
-using CodeZone.MVC.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace CodeZone.MVC.Controllers
 {
@@ -26,7 +24,9 @@ namespace CodeZone.MVC.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            ViewBag.ErrorMessage = HttpContext.Items["errorMessage"] as string;
+            ViewBag.ErrorCode = HttpContext.Response.StatusCode;
+            return View();
         }
     }
 }

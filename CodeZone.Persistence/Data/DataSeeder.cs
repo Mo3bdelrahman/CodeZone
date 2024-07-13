@@ -1,11 +1,5 @@
 ﻿using CodeZone.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeZone.Persistence.Data
 {
@@ -13,16 +7,16 @@ namespace CodeZone.Persistence.Data
     {
         public static void Seed(this ModelBuilder modelBuilder)
         {
-            List<Item> items = new List<Item> 
+            List<Item> items = new List<Item>
             {
-                new Item{ Id = 1 , Name = "Apple" , Image = "images/items/apple" },
-                new Item{ Id = 2 , Name = "Banana" , Image = "images/items/banana" },
-                new Item{ Id = 3 , Name = "Cherry" , Image = "images/items/cherry" },
-                new Item{ Id = 4 , Name = "Date" , Image = "images/items/date" },
-                new Item{ Id = 5 , Name = "Elderberry" , Image = "images/items/elderberry" },
-                new Item{ Id = 6 , Name = "Fig" , Image = "images/items/fig" },
-                new Item{ Id = 7 , Name = "Grape" , Image = "images/items/grape" },
-                new Item{ Id = 8 , Name = "Honeydew" , Image = "images/items/honeydew" },
+                new Item{ Id = 1 , Name = "Apple" , Image = "images/items/item_1.png" },
+                new Item{ Id = 2 , Name = "Banana" , Image = "images/items/item_2.png" },
+                new Item{ Id = 3 , Name = "Cherry" , Image = "images/items/item_3.png" },
+                new Item{ Id = 4 , Name = "Date" , Image = "images/items/item_4.png" },
+                new Item{ Id = 5 , Name = "Elderberry" , Image = "images/items/item_5.png" },
+                new Item{ Id = 6 , Name = "Fig" , Image = "images/items/item_6.png" },
+                new Item{ Id = 7 , Name = "Grape" , Image = "images/items/item_7.png" },
+                new Item{ Id = 8 , Name = "Honeydew" , Image = "images/items/item_8.png" },
             };
 
             List<Store> stores = new List<Store>
