@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Purchase";
+}
+
+<h1>Purchase</h1>
+<partial name="_ProcessPartialView" />
+
+
+@section Scripts {
+
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+
+        let getBalance = ()=> {
+            let storeId = $('#storesList').val();
+            let itemId = $('#itemsList').val();
+            if (storeId > 0 && itemId > 0) {
+                $.ajax({
+                    url: '@Url.Action("GetBalance", "Process")',
+                    type: 'GET',
+                    data: { storeId: storeId, itemId: itemId },
+                    success: (data) => {
+                        $('#balance').val(data);
+                    },
+                    error: () => {
+                        alert('Error fetching balance');
+                    }
+                });
+            } else {
+                $('#balance').val('');
+            }
+        };
+
+        $(document).ready(()=> {
+            getBalance();
+            $('#storesList, #itemsList').change(()=>getBalance());
+        });
+    </script>
+}
+

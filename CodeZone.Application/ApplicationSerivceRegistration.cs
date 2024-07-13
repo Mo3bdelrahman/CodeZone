@@ -11,9 +11,14 @@ namespace CodeZone.Application
         public static IServiceCollection AddApplicationService(this IServiceCollection services)
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddMediatR(configuration => configuration.RegisterServicesFromAssemblies(
+               AppDomain.CurrentDomain.GetAssemblies()
+               )
+           );
             services.AddFluentValidationAutoValidation();
             services.AddFluentValidationClientsideAdapters();
             services.AddValidatorsFromAssemblyContaining(typeof(CreateItemCommandValidator));
+           
 
             return services;
 

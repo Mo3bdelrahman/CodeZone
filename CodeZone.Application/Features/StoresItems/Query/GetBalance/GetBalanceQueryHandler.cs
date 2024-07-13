@@ -18,7 +18,7 @@ namespace CodeZone.Application.Features.StoresItems.Query.GetBalance
         {
             var entity = await _repository.GetStoreItem(request.StoreId,request.ItemId);
             if (entity == null)
-                throw new Exceptions.NotFoundException("Not Found this item");
+                return 0;
             return entity.Quantity;
         }
     }

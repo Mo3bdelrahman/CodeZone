@@ -21,7 +21,7 @@ namespace CodeZone.Infrastructure.ImageService
         {
             try
             {
-                string imagePath = $"images\\items\\item_{item.Id}";
+                string imagePath = item.Image;
                 string fullPath = _path + imagePath;
                 if (File.Exists(fullPath))
                 {

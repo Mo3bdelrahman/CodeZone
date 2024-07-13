@@ -1,0 +1,17 @@
+﻿@model StoreViewModel
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Name" class="form-label">Name</label>
+                <span asp-validation-for="Name" class="text-danger"></span>
+                <input type="text" class="form-control" asp-for="Name" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Confirm" class="btn btn-primary mt-3" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -26,10 +26,13 @@ namespace CodeZone.Application.Features.Items.Command.Update
 
         public async Task<bool> Handle(UpdateItemCommand request, CancellationToken cancellationToken)
         {
-            Item item = _mapper.Map<Item>(request);
+            var item = await _repository.GetById(request.Id);
+            if (item == null)
+                throw new Exceptions.BadRequestException("Error While update Item");
+            item.Name = request.Name;
             var res = await _repository.Update(item);
             if (!res)
-                throw new Exceptions.BadRequestException("Error in update Item");
+                throw new Exceptions.BadRequestException("Error While update Item");
 
             if (request.Image != null)
             {
