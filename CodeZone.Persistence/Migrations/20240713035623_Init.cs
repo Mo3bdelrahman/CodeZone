@@ -69,14 +69,14 @@ namespace CodeZone.Persistence.Migrations
                 columns: new[] { "Id", "Image", "Name" },
                 values: new object[,]
                 {
-                    { 1, "images/items/apple", "Apple" },
-                    { 2, "images/items/banana", "Banana" },
-                    { 3, "images/items/cherry", "Cherry" },
-                    { 4, "images/items/date", "Date" },
-                    { 5, "images/items/elderberry", "Elderberry" },
-                    { 6, "images/items/fig", "Fig" },
-                    { 7, "images/items/grape", "Grape" },
-                    { 8, "images/items/honeydew", "Honeydew" }
+                    { 1, "images/items/item_1.png", "Apple" },
+                    { 2, "images/items/item_2.png", "Banana" },
+                    { 3, "images/items/item_3.png", "Cherry" },
+                    { 4, "images/items/item_4.png", "Date" },
+                    { 5, "images/items/item_5.png", "Elderberry" },
+                    { 6, "images/items/item_6.png", "Fig" },
+                    { 7, "images/items/item_7.png", "Grape" },
+                    { 8, "images/items/item_8.png", "Honeydew" }
                 });
 
             migrationBuilder.InsertData(

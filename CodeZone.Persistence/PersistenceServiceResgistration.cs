@@ -20,6 +20,7 @@ namespace CodeZone.Persistence
 
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IStoreItemRepository, StoreItemRepository>();
+            services.AddScoped<IStoreRepository, StoreRepository>();
             services.AddScoped<IProcessFactory,ProcessFactory>();
 
             return services;

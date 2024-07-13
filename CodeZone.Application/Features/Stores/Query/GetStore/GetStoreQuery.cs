@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CodeZone.Application.Features.Stores.Query.GetStore
 {
-    public class GetStoreQuery : IRequest<StoreDto>
+    public class GetStoreQuery : IRequest<StoreDetailesDto>
     {
         public int Id { get; set; }
     }

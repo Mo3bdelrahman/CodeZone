@@ -10,7 +10,8 @@ namespace CodeZone.MVC.ViewModels.Store
         public StoreProfile()
         {
             CreateMap<StoreDto, StoreViewModel>();
-            CreateMap<StoreDto, StoreDetailesViewModel>();
+            CreateMap<StoreDetailesDto, StoreDetailesViewModel>();
+            CreateMap<StoreDetailesDto, StoreViewModel>();
             CreateMap<StoreViewModel, CreateStoreCommand>();
             CreateMap<StoreViewModel, UpdateStoreCommand>();
         }

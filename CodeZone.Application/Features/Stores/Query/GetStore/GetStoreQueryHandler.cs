@@ -12,23 +12,23 @@ using System.Threading.Tasks;
 
 namespace CodeZone.Application.Features.Stores.Query.GetStore
 {
-    public class GetStoreQueryHandler : IRequestHandler<GetStoreQuery, StoreDto>
+    public class GetStoreQueryHandler : IRequestHandler<GetStoreQuery, StoreDetailesDto>
     {
-        private readonly IRepository<Store> _repository;
+        private readonly IStoreRepository _repository;
         private readonly IMapper _mapper;
 
-        public GetStoreQueryHandler(IRepository<Store> repository, IMapper mapper)
+        public GetStoreQueryHandler(IStoreRepository repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
         }
-        public async Task<StoreDto> Handle(GetStoreQuery request, CancellationToken cancellationToken)
+        public async Task<StoreDetailesDto> Handle(GetStoreQuery request, CancellationToken cancellationToken)
         {
-            var store = await _repository.GetById(request.Id);
+            var store = await _repository.GetStoreByIdWithItems(request.Id);
             if (store == null)
                 throw new NotFoundException("Not Found this store");
 
-            return _mapper.Map<StoreDto>(store);
+            return _mapper.Map<StoreDetailesDto>(store);
         }
     }
 }

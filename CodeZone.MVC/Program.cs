@@ -1,7 +1,7 @@
 using CodeZone.Application;
 using CodeZone.Infrastructure;
 using CodeZone.Persistence;
-
+using CodeZone.Application.Middlewares;
 namespace CodeZone.MVC
 {
     public class Program
@@ -30,6 +30,7 @@ namespace CodeZone.MVC
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
             app.UseRouting();
 
             app.UseAuthorization();

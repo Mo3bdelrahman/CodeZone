@@ -17,6 +17,7 @@ namespace CodeZone.Application.Features.Stores
         public StoreProfile()
         {
             CreateMap<Store, StoreDto>();
+            CreateMap<Store, StoreDetailesDto>();
             CreateMap<CreateStoreCommand, Store>();
             CreateMap<UpdateStoreCommand, Store>();
         }
