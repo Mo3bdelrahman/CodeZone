@@ -1,11 +1,6 @@
 ﻿using CodeZone.Application.Contracts.Infrastructure;
 using CodeZone.Domain.Entities;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeZone.Infrastructure.ImageService
 {
@@ -35,7 +30,7 @@ namespace CodeZone.Infrastructure.ImageService
             }
         }
 
-        public async Task<string> SaveImage(IFormFile file,Item item)
+        public async Task<string> SaveImage(IFormFile file, Item item)
         {
             try
             {

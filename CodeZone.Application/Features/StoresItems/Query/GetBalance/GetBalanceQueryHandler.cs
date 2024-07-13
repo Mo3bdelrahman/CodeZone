@@ -16,7 +16,7 @@ namespace CodeZone.Application.Features.StoresItems.Query.GetBalance
 
         public async Task<int> Handle(GetBalanceQuery request, CancellationToken cancellationToken)
         {
-            var entity = await _repository.GetStoreItem(request.StoreId,request.ItemId);
+            var entity = await _repository.GetStoreItem(request.StoreId, request.ItemId);
             if (entity == null)
                 return 0;
             return entity.Quantity;

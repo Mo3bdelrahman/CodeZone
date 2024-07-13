@@ -1,11 +1,5 @@
 ﻿using CodeZone.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeZone.Persistence.Data
 {
@@ -13,7 +7,7 @@ namespace CodeZone.Persistence.Data
     {
         public static void Seed(this ModelBuilder modelBuilder)
         {
-            List<Item> items = new List<Item> 
+            List<Item> items = new List<Item>
             {
                 new Item{ Id = 1 , Name = "Apple" , Image = "images/items/item_1.png" },
                 new Item{ Id = 2 , Name = "Banana" , Image = "images/items/item_2.png" },

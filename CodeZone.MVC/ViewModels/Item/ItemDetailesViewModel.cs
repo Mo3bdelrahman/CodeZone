@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace CodeZone.MVC.ViewModels.Item
+﻿namespace CodeZone.MVC.ViewModels.Item
 {
     public class ItemDetailesViewModel
     {

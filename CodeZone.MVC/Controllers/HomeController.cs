@@ -1,6 +1,4 @@
-using CodeZone.MVC.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace CodeZone.MVC.Controllers
 {

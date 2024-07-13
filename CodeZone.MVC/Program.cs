@@ -1,7 +1,7 @@
 using CodeZone.Application;
+using CodeZone.Application.Middlewares;
 using CodeZone.Infrastructure;
 using CodeZone.Persistence;
-using CodeZone.Application.Middlewares;
 namespace CodeZone.MVC
 {
     public class Program

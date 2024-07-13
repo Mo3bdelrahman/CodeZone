@@ -1,11 +1,5 @@
 ﻿using CodeZone.Application.Contracts.Persistence;
-using CodeZone.Domain.Entities;
 using CodeZone.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeZone.Persistence.Strategies
 {

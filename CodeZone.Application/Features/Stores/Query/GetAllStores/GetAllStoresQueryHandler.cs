@@ -1,13 +1,7 @@
 ﻿using AutoMapper;
 using CodeZone.Application.Contracts.Persistence;
-using CodeZone.Application.Features.Items.Query;
 using CodeZone.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeZone.Application.Features.Stores.Query.GetAllStores
 {

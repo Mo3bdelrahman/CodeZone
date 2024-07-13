@@ -18,7 +18,7 @@ namespace CodeZone.Application
             services.AddFluentValidationAutoValidation();
             services.AddFluentValidationClientsideAdapters();
             services.AddValidatorsFromAssemblyContaining(typeof(CreateItemCommandValidator));
-           
+
 
             return services;
 

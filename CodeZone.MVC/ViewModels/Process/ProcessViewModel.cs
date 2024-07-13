@@ -16,7 +16,7 @@ namespace CodeZone.MVC.ViewModels.Process
         [Required(ErrorMessage = "You must Select Item")]
         [Range(1, int.MaxValue, ErrorMessage = "You must Select Item")]
         public int ItemId { get; set; }
-        public IReadOnlyList<ItemListViewModel>? Items {  get; set; }
+        public IReadOnlyList<ItemListViewModel>? Items { get; set; }
         public IReadOnlyList<StoreViewModel>? Stores { get; set; }
 
     }

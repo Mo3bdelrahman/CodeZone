@@ -9,7 +9,7 @@ namespace CodeZone.Persistence.Data
         public DbSet<Item> Items { get; set; }
         public DbSet<Store> Stores { get; set; }
         public DbSet<StoreItem> StoresItems { get; set; }
-        public CodeZoneContext(DbContextOptions contextOptions ) : base(contextOptions) { }
+        public CodeZoneContext(DbContextOptions contextOptions) : base(contextOptions) { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

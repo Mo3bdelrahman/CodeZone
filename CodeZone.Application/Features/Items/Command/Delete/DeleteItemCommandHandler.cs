@@ -2,11 +2,6 @@
 using CodeZone.Application.Contracts.Persistence;
 using CodeZone.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeZone.Application.Features.Items.Command.Delete
 {
@@ -31,7 +26,7 @@ namespace CodeZone.Application.Features.Items.Command.Delete
             if (!res)
                 throw new Exceptions.BadRequestException("Error While Delete Item");
 
-             _imageService.DeleteImage(item);
+            _imageService.DeleteImage(item);
 
             return res;
         }

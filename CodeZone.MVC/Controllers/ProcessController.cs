@@ -4,13 +4,11 @@ using CodeZone.Application.Features.Stores.Query.GetAllStores;
 using CodeZone.Application.Features.StoresItems.Command.PurchaseStoreItem;
 using CodeZone.Application.Features.StoresItems.Command.SellStoreItem;
 using CodeZone.Application.Features.StoresItems.Query.GetBalance;
-using CodeZone.Domain.Entities;
 using CodeZone.MVC.ViewModels.Item;
 using CodeZone.MVC.ViewModels.Process;
 using CodeZone.MVC.ViewModels.Store;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace CodeZone.MVC.Controllers
 {
@@ -29,7 +27,7 @@ namespace CodeZone.MVC.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Purchase(int storeId,int itemId)
+        public async Task<IActionResult> Purchase(int storeId, int itemId)
         {
             var itemsDtos = await _mediator.Send(new GetAllItemsQuery());
             var storesDtos = await _mediator.Send(new GetAllStoresQuery());
@@ -37,12 +35,12 @@ namespace CodeZone.MVC.Controllers
             var itemsViewModels = _mapper.Map<IReadOnlyList<ItemListViewModel>>(itemsDtos);
             var storesViewModels = _mapper.Map<IReadOnlyList<StoreViewModel>>(storesDtos);
 
-            var viewModel = new ProcessViewModel 
-            { 
+            var viewModel = new ProcessViewModel
+            {
                 Items = itemsViewModels,
                 Stores = storesViewModels,
                 ItemId = itemId,
-                StoreId = storeId  
+                StoreId = storeId
             };
             return View(viewModel);
         }

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using CodeZone.Application.Contracts.Persistence;
-using MediatR;
-using CodeZone.Domain.Enums;
 using CodeZone.Domain.Entities;
+using CodeZone.Domain.Enums;
+using MediatR;
 
 namespace CodeZone.Application.Features.StoresItems.Command.PurchaseStoreItem
 {
@@ -39,7 +39,7 @@ namespace CodeZone.Application.Features.StoresItems.Command.PurchaseStoreItem
             if (!res)
                 throw new Exceptions.BadRequestException("error While purchase Item");
 
-            return res;               
+            return res;
         }
     }
 }

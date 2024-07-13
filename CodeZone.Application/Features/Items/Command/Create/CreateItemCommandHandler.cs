@@ -3,12 +3,6 @@ using CodeZone.Application.Contracts.Infrastructure;
 using CodeZone.Application.Contracts.Persistence;
 using CodeZone.Domain.Entities;
 using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeZone.Application.Features.Items.Command.Create
 {
@@ -32,7 +26,7 @@ namespace CodeZone.Application.Features.Items.Command.Create
             if (!res)
                 throw new Exceptions.BadRequestException("Error in create Item");
 
-            if(request.Image != null)
+            if (request.Image != null)
             {
                 string url = await _imageService.SaveImage(request.Image, item);
                 item.Image = url;

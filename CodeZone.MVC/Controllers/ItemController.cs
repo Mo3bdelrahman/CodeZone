@@ -4,13 +4,7 @@ using CodeZone.Application.Features.Items.Command.Delete;
 using CodeZone.Application.Features.Items.Command.Update;
 using CodeZone.Application.Features.Items.Query.GetAllItems;
 using CodeZone.Application.Features.Items.Query.GetItem;
-using CodeZone.Application.Features.Stores.Command.Create;
-using CodeZone.Application.Features.Stores.Command.Delete;
-using CodeZone.Application.Features.Stores.Command.Update;
-using CodeZone.Application.Features.Stores.Query.GetAllStores;
-using CodeZone.Application.Features.Stores.Query.GetStore;
 using CodeZone.MVC.ViewModels.Item;
-using CodeZone.MVC.ViewModels.Store;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

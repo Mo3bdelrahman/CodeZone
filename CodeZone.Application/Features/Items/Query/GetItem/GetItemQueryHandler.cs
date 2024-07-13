@@ -3,15 +3,10 @@ using CodeZone.Application.Contracts.Persistence;
 using CodeZone.Application.Exceptions;
 using CodeZone.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeZone.Application.Features.Items.Query.GetItem
 {
-    public class GetItemQueryHandler : IRequestHandler<GetItemQuery,ItemDto>
+    public class GetItemQueryHandler : IRequestHandler<GetItemQuery, ItemDto>
     {
         private readonly IRepository<Item> _repository;
         private readonly IMapper _mapper;

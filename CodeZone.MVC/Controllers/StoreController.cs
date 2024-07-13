@@ -77,7 +77,7 @@ namespace CodeZone.MVC.Controllers
             await _mediator.Send(new DeleteStoreCommand { Id = id });
             return RedirectToAction("Index");
         }
- 
+
 
 
     }

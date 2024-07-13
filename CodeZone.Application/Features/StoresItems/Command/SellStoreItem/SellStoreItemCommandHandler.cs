@@ -25,7 +25,7 @@ namespace CodeZone.Application.Features.StoresItems.Command.SellStoreItem
                 throw new Exceptions.BadRequestException("error While Sell Item");
 
             IProcessStrategy processStrategy = _processFactory.GetProcess(ProcessType.Sell);
-    
+
             var storeItemRequest = _mapper.Map<StoreItem>(request);
 
             var res = await processStrategy.ProcessStoreItem(storeItemRequest);
